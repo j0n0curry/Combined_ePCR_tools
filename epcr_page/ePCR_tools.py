@@ -1,4 +1,13 @@
 import streamlit as st
+import os
+from io import BytesIO
+from io import StringIO
+from io import TextIOWrapper
+import pandas as pd
+import numpy as np
+import plotly.express as px
+import plotly.graph_objects as go
+import math
 
 #to add a new page, simply add in the new appp in to the 'pages' folder and add in a function to call the new app below.
 #Use the function to create a dropdown selectable for the app, place the list of apps and he markdown text to be show in the 
