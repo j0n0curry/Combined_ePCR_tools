@@ -9,7 +9,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import math
 
-version = 'v3 - alpha'
+version = 'v4 - Calibration Araya 1 - 100 100 100'
 
     
 #Set up main page of application / Header info / data collection / file selection / remove files / Reset
