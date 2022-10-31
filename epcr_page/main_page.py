@@ -12,22 +12,27 @@ import math
 
 
 def main_page():
-    st.markdown("# Main page 🎈")
-    st.sidebar.markdown("# Main page 🎈")
+    st.markdown("# Main page ")
+    st.sidebar.markdown("# Main page ")
     
-def ePCR():
-    st.markdown("# ePCR viewer ❄️")
-    st.sidebar.markdown("# ePCR viewer ❄️")
+def Araya1():
+    st.markdown("# ePCR viewer - Araya 1 - 100 100 100")
+    st.sidebar.markdown("# ePCR viewer - Araya 1")
     
-def Araya():
-    st.markdown("# Araya calibration 🎉")
-    st.sidebar.markdown("# Araya verification 🎉")
+def Araya_comp():
+    st.markdown("# Araya calibration ")
+    st.sidebar.markdown("# Araya verification ")
+    
+def Araya2():
+    st.markdown("# ePCR viewer - Araya 2 - 100 100 100")
+    st.sidebar.markdown("# ePCR viewer - Araya 2")
     
     
 page_names_to_funcs = {
     "Main Page": main_page,
-    "ePCR_viewer": ePCR,
-    "Araya_comparison": Araya,
+    "ePCR_viewer": Araya1,
+    "Araya_comparison": Araya_comp,
+    "ePCR_viewer" : Araya2
 }
 
 selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
