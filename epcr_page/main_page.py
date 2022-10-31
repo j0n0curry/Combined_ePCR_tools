@@ -12,7 +12,7 @@ import math
 
 
 def main_page():
-    st.markdown("# Main page ")
+    st.markdown("# ePCR tools - providing tools for analysis and calling of data from Araya 1 / 2. The Araya comparison tool is intended to function with calibration tape and not to compare Arayas directly. Please down load parsed data - all_data.csv to perform separate analysis. ")
     st.sidebar.markdown("# Main page ")
     
 def Araya1():
