@@ -9,7 +9,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import math
 
-version = 'v4 - alpha'
+version = 'v4 - alpha - Calibration Araya 2 - 100 100 100'
 
     
 #Set up main page of application / Header info / data collection / file selection / remove files / Reset
@@ -21,7 +21,7 @@ version = 'v4 - alpha'
 
 st.set_page_config(layout="wide")
 
-st.title('ePCR analysis tool ' +str(version) + ' with specific thresholding for Araya 2 - RFL - 100 100 100 calibration')
+st.title('ePCR analysis tool ' +str(version))
 
 st.write('Developed by: jonathan.curry@lgcgroup.com - alpha version - for bugs, which are likely - please email files used for debugging purposes')
 
