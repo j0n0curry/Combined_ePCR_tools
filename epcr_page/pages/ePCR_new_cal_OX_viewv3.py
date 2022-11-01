@@ -286,8 +286,9 @@ def valid_array(df):
     
 def scoring(row):
 
-    
-    if row['norm_N_Cov'] < 0.5 and row['norm_RNaseP'] <0.2:
+    if row['ROX_RFU'] > 16000:
+        return('VOID')
+    elif row['norm_N_Cov'] < 0.5 and row['norm_RNaseP'] <0.2:
         return('No_Call')
     elif row['norm_N_Cov'] < 0.5 and row['norm_RNaseP'] > 0.2:
         return('Negative Patient')
