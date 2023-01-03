@@ -93,7 +93,7 @@ th_props = [
   ]
                                
 td_props = [
-  ('font-size', '12px')
+  ('font-size', '30px')
   ]
                                  
 styles = [
