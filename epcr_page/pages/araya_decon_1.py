@@ -153,7 +153,7 @@ new_m = np.array([[a,b,c],[d,e,f],[g,h,i]])
 adj_out = pd.DataFrame(new_m, columns = [['FAM_IN', 'VIC_IN', 'ROX_IN']],index = [['FAM_out', 'VIC_out', 'ROX_out']])
 
     # table
-df2=adj_out.style.set_properties(**{'text-align': 'left'}).set_table_styles(styles)
+df2 = adj_out.style.set_properties(**{'text-align': 'left'}).set_table_styles(styles)
 st.table(df2)
 
 
@@ -162,9 +162,6 @@ st.table(df2)
 basis = df1[['FAM_RFU', 'VIC_RFU', 'ROX_RFU']].to_numpy()
 S = new_m
 tbasis = apply_transformation(basis, S)
-
-#adjust = pd.DataFrame(tbasis, columns = (['FAM_RFU', 'VIC_RFU', 'ROX_RFU']))
-
 
 df1[['new_FAM', 'new_VIC','new_ROX']] = tbasis
 
