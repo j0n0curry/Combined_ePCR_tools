@@ -145,16 +145,15 @@ g = st.sidebar.slider(s_f31, -1.000, 1.000, 0.000)
 h = st.sidebar.slider(s_f32, -1.000, 1.000, 0.000)
 i = st.sidebar.slider(s_f33, 0.000, 2.000, 1.000)
 
-st.write(a,b,c,d,e,f,g,h,i)
     
 new_m = np.array([[a,b,c],[d,e,f],[g,h,i]])
 
 
 adj_out = pd.DataFrame(new_m, columns = [['FAM_IN', 'VIC_IN', 'ROX_IN']],index = [['FAM_out', 'VIC_out', 'ROX_out']])
 
-    # table
-df2 = adj_out.style.set_properties(**{'text-align': 'left'}).set_table_styles(styles)
-st.table(df2)
+st.title('ARaya Deconvolution Matrix Adjustment')
+adj_out = adj_out.style.set_properties(**{'text-align': 'left'}).set_table_styles(styles)
+st.table(adj_out)
 
 
 
@@ -178,9 +177,9 @@ df1['comp_nVIC'] = df1.new_VIC / df1.new_ROX
 #fig = plt.gcf()
 #fig.set_size_inches(20,12)
 
-def plot_raw_over(df,a,b,c,d,L,W):
+def plot_raw_over(df,a,b,c,d):
     fig1, (ax_nFAM, ax_fam_rox) = plt.subplots(nrows=1,ncols=2,
-    figsize=(L,W))
+    figsize=(15,10))
     
     sns.scatterplot(data = df1, x = a, y = b, s = 30, color = 'red', edgecolor = 'black', ax=ax_nFAM)
     
@@ -194,7 +193,7 @@ def plot_raw_over(df,a,b,c,d,L,W):
     ax_fam_rox.grid(True)
     st.pyplot(fig1)
 
-plot_raw_over(df1,'comp_nVIC','comp_nFAM','norm_RNAseP','norm_N_Cov', 20,10)
+plot_raw_over(df1,'comp_nVIC','comp_nFAM','norm_RNAseP','norm_N_Cov')
 
 
 
