@@ -134,15 +134,15 @@ s_f31 = 'F3/1'
 s_f32 = 'F3/2'
 s_f33 = 'F3/3'
 
-a = st.sidebar.slider(s_f11,1.000, -1.000)
-b = st.sidebar.slider(s_f12, 0.000, -1.000)
-c = st.sidebar.slider(s_f13, 0.000, -1.000)
-d = st.sidebar.slider(s_f21, 0.000, -1.000)
-e = st.sidebar.slider(s_f22, 1.000, -1.000)
-f = st.sidebar.slider(s_f23, 0.000, -1.000)
-g = st.sidebar.slider(s_f31, 0.000, -1.000)
-h = st.sidebar.slider(s_f32, 0.000, -1.000)
-i = st.sidebar.slider(s_f33, 1.000, -1.000)
+a = st.sidebar.slider(s_f11,0.000, 2.000, 1.000)
+b = st.sidebar.slider(s_f12, -1.000, 1.000, 0.000)
+c = st.sidebar.slider(s_f13, -1.000, 1.000, 0.000)
+d = st.sidebar.slider(s_f21, -1.000, 1.000, 0.000)
+e = st.sidebar.slider(s_f22, 0.000, 2.000, 1.000)
+f = st.sidebar.slider(s_f23, -1.000, 1.000, 0.000)
+g = st.sidebar.slider(s_f31, -1.000, 1.000, 0.000)
+h = st.sidebar.slider(s_f32, -1.000, 1.000, 0.000)
+i = st.sidebar.slider(s_f33, 0.000, 2.000, 1.000)
 
 st.write(a,b,c,d,e,f,g,h,i)
     
