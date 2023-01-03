@@ -79,26 +79,28 @@ def pct_change(first, second):
         return change
 
 
-#assign confidence elipse - calculate covariance matrix - use covar to calculate Pearson later. 
-
-  
-
-###### concordance set generate concordance results by merging two called sets of data from each araya and assessing the results
-###### provides plot bar of concordance - table of concordance results - plot of True and false alignment by group using ll data
-###### by Araya overlay - easy to spot areas where sample calles are discordant - TODO - xport table -with wells? Not sure important 
-###### might be?
-
-
-#@st.cache(suppress_st_warning=True)
-    
-    
-
-
-
-
-
 
 uploaded_file1 = st.sidebar.file_uploader("Uploaded Reference Araya", type=['csv'], accept_multiple_files=False, key = 'key')
+
+
+# style
+th_props = [
+  ('font-size', '14px'),
+  ('text-align', 'center'),
+  ('font-weight', 'bold'),
+  ('color', '#6d6d6d'),
+  ('background-color', '#f7ffff')
+  ]
+                               
+td_props = [
+  ('font-size', '12px')
+  ]
+                                 
+styles = [
+  dict(selector="th", props=th_props),
+  dict(selector="td", props=td_props)
+  ]
+
 
 
 
@@ -106,7 +108,6 @@ uploaded_file1 = st.sidebar.file_uploader("Uploaded Reference Araya", type=['csv
 #load dataset and assign to dataframe - this is a session state frame - is static
 if uploaded_file1 is not None:
     df1 = load_data(uploaded_file1)
-    #st.write(df1.head())
 else:
     st.warning('Please upload data for analysis')
     st.stop() 
@@ -150,9 +151,11 @@ new_m = np.array([[a,b,c],[d,e,f],[g,h,i]])
 
 
 adj_out = pd.DataFrame(new_m, columns = [['FAM_IN', 'VIC_IN', 'ROX_IN']],index = [['FAM_out', 'VIC_out', 'ROX_out']])
-st.dataframe(adj_out)
+#st.dataframe(adj_out)
 
-    
+    # table
+df2=adj_out.style.set_properties(**{'text-align': 'left'}).set_table_styles(styles)
+st.table(df2)
 
 
 
