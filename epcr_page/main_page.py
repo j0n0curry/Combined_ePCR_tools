@@ -29,12 +29,17 @@ def Araya2():
     st.markdown("# ePCR viewer - Araya 2 - 100 100 100")
     st.sidebar.markdown("# ePCR viewer - Araya 2")
     
+def Decon():
+    st.markdown("# ePCR viewer - Deconvolution Testing")
+    st.sidebar.markdown("# Araya Deconvolution Alignment")
+    
     
 page_names_to_funcs = {
     "Main Page": main_page,
     "ePCR_viewer": Araya1,
     "Araya_comparison": Araya_comp,
     "ePCR_viewer" : Araya2
+    "Deconvoluton Testing" : Decon
 }
 
 selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
