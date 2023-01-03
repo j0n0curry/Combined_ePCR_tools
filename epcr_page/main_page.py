@@ -38,7 +38,7 @@ page_names_to_funcs = {
     "Main Page": main_page,
     "ePCR_viewer": Araya1,
     "Araya_comparison": Araya_comp,
-    "ePCR_viewer" : Araya2
+    "ePCR_viewer" : Araya2,
     "Deconvoluton Testing" : Decon
 }
 
