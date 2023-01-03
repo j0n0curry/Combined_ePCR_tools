@@ -85,7 +85,7 @@ uploaded_file1 = st.sidebar.file_uploader("Uploaded Reference Araya", type=['csv
 
 # style
 th_props = [
-  ('font-size', '14px'),
+  ('font-size', '30px'),
   ('text-align', 'center'),
   ('font-weight', 'bold'),
   ('color', '#6d6d6d'),
@@ -151,7 +151,6 @@ new_m = np.array([[a,b,c],[d,e,f],[g,h,i]])
 
 
 adj_out = pd.DataFrame(new_m, columns = [['FAM_IN', 'VIC_IN', 'ROX_IN']],index = [['FAM_out', 'VIC_out', 'ROX_out']])
-#st.dataframe(adj_out)
 
     # table
 df2=adj_out.style.set_properties(**{'text-align': 'left'}).set_table_styles(styles)
