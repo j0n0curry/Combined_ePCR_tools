@@ -356,8 +356,6 @@ quad_384 = {'A1':'QUAD 1','A2':'QUAD 2','A3':'QUAD 1','A4':'QUAD 2','A5':'QUAD 1
 
 comp['quad'] = comp['Well'].map(quad_384).fillna('missing')
    
-print(comp.head())
-st.table(comp.head())
 
 ####need a function here to strip out empty arrays from the data_stream - not a great idea
 #####stripping data out- function should perhaps sit in loop and check the mean of ROX - if less than 1000
