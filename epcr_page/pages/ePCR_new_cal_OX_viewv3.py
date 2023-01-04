@@ -571,7 +571,6 @@ if "updated_df" not in st.session_state:
     st.session_state.updated_df = steady_data
 
 
-st.write(steady_data)
 
 #ctrl_qc_table = testdf.groupby(['date_time','Result'])['norm_N_Cov','FAM_RFU', 'ROX].agg('mean', 'std')
 #ctrl_qc_table = testdf.groupby(['date_time','Result'])['norm_N_Cov','FAM_RFU', 'ROX].agg('mean', 'std')
