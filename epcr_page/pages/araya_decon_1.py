@@ -85,7 +85,7 @@ uploaded_file1 = st.sidebar.file_uploader("Uploaded Reference Araya", type=['csv
 
 # style
 th_props = [
-  ('font-size', '30px'),
+  ('font-size', '15px'),
   ('text-align', 'center'),
   ('font-weight', 'bold'),
   ('color', '#6d6d6d'),
@@ -93,7 +93,7 @@ th_props = [
   ]
                                
 td_props = [
-  ('font-size', '30px')
+  ('font-size', '15px')
   ]
                                  
 styles = [
