@@ -232,7 +232,6 @@ for uploaded_file in uploaded_files:
         
         
 comp = data_manager.group_df #assign variable - contactenated dataframes - csv loading direct from path doesn't require this. 
-print(comp)
 
 # start onwards with processing only if dataframe us greater than 0 
 if len(comp) > 0:
