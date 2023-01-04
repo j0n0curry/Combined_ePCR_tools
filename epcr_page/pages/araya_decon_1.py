@@ -174,12 +174,11 @@ df1['comp_nVIC'] = df1.new_VIC / df1.new_ROX
 
 
 
-#fig = plt.gcf()
-#fig.set_size_inches(20,12)
+
 
 def plot_raw_over(df,a,b,c,d):
     fig1, (ax_nFAM, ax_fam_rox) = plt.subplots(nrows=1,ncols=2,
-    figsize=(15,10))
+    figsize=(20,10))
     
     sns.scatterplot(data = df1, x = a, y = b, s = 30, color = 'red', edgecolor = 'black', ax=ax_nFAM)
     
