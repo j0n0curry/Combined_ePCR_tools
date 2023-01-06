@@ -15,7 +15,7 @@ st.set_page_config(layout="wide")
  
 
 
-version = 'New Cal - Oxford - v3 - alpha'
+version = 'New Cal - Oxford - v3 - alpha - RFL New Cal - Threshold 0.85 Pos'
 
 
 
@@ -293,11 +293,11 @@ def scoring(row):
         return('Negative Patient')
     elif row['norm_N_Cov'] > 0.5 and row['norm_N_Cov'] <= 1.0 and row['norm_RNaseP'] >0.4:
         return('PLOD')
-    elif row['norm_N_Cov'] > 1 and row['norm_N_Cov'] <= 1.5 and row['norm_RNaseP'] > 0.4:
+    elif row['norm_N_Cov'] > 0.85 and row['norm_N_Cov'] <= 1.5 and row['norm_RNaseP'] > 0.4:
         return('N_Cov Patient Positive')
     elif row['norm_N_Cov'] > 1.5 and row['norm_RNaseP'] >= 0.2:
         return('N_Cov Patient Positive plus E')
-    elif row['norm_N_Cov'] > 1 and row['norm_N_Cov'] <= 1.5 and row['norm_RNaseP']<0.4:
+    elif row['norm_N_Cov'] > 0.85 and row['norm_N_Cov'] <= 1.5 and row['norm_RNaseP']<0.4:
         return('Control_N_Cov')
     elif row['norm_N_Cov'] > 1.5 and row['norm_RNaseP']<0.4:
         return('Control_N_Cov_plus_E')
