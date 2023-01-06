@@ -241,6 +241,7 @@ if len(comp) > 0:
     comp['VIC_RFU'] = comp['VIC_RFU'].astype('float').abs()
     comp['ROX_RFU'] = comp['ROX_RFU'].astype('float').abs()
     comp['Well'] = comp['Row_ID']+comp['Col_ID']
+    comp['UID'] = comp['Run_ID'] + comp['Well']
     comp['Col_ID'] = comp['Col_ID'].astype(int, errors = 'ignore')
     comp['Run_ID'] = comp['Run_ID'].astype(int, errors = 'ignore')
     
