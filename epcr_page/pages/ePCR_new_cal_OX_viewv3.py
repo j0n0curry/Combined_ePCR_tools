@@ -15,7 +15,7 @@ st.set_page_config(layout="wide")
  
 
 
-version = 'New Cal - Oxford - v3 - alpha - RFL New Cal - Threshold 0.85 Pos'
+version = 'New Cal - Oxford - v3 - alpha - RFL New Cal - Threshold 0.8 Pos'
 
 
 
@@ -291,7 +291,7 @@ def scoring(row):
         return('No_Call')
     elif row['norm_N_Cov'] < 0.5 and row['norm_RNaseP'] > 0.2:
         return('Negative Patient')
-    elif row['norm_N_Cov'] > 0.5 and row['norm_N_Cov'] <= 1.0 and row['norm_RNaseP'] >0.4:
+    elif row['norm_N_Cov'] > 0.5 and row['norm_N_Cov'] <= 0.8 and row['norm_RNaseP'] >0.4:
         return('PLOD')
     elif row['norm_N_Cov'] > 0.8 and row['norm_N_Cov'] <= 1.5 and row['norm_RNaseP'] > 0.4:
         return('N_Cov Patient Positive')
@@ -301,7 +301,7 @@ def scoring(row):
         return('Control_N_Cov')
     elif row['norm_N_Cov'] > 1.5 and row['norm_RNaseP']<0.4:
         return('Control_N_Cov_plus_E')
-    elif row['norm_N_Cov'] > 0.5 and row['norm_N_Cov'] <= 1.0 and row['norm_RNaseP'] <0.3:
+    elif row['norm_N_Cov'] > 0.5 and row['norm_N_Cov'] <= 0.8 and row['norm_RNaseP'] <0.3:
         return'CTRL_PLOD'
     else:
         return('missing')
@@ -309,7 +309,7 @@ def scoring(row):
 def void_detect_neg(row):
     if row['norm_N_Cov'] > 0.8:
         return('Detected')
-    elif row['norm_N_Cov'] > 0.5 and row['norm_N_Cov'] <= 1.0:
+    elif row['norm_N_Cov'] > 0.5 and row['norm_N_Cov'] <= 0.8:
         return('PLOD')
     else:
         return('negative')
@@ -319,7 +319,7 @@ def hit_detect_neg(row):
         return('3-hit_detect')
     elif row['norm_N_Cov'] >= 0.8 and row['norm_N_Cov'] < 1.5 :
         return('2-hit_detect')
-    elif row['norm_N_Cov'] > 0.5 and row['norm_N_Cov'] <= 1.0:
+    elif row['norm_N_Cov'] > 0.5 and row['norm_N_Cov'] <= 0.8:
         return('1-hit_detect')
     else:
         return('negative') 
