@@ -354,6 +354,7 @@ quad_384 = {'A1':'QUAD 1','A2':'QUAD 2','A3':'QUAD 1','A4':'QUAD 2','A5':'QUAD 1
             'P1':'QUAD 3','P2':'QUAD 4','P3':'QUAD 3','P4':'QUAD 4','P5':'QUAD 3','P6':'QUAD 4','P7':'QUAD 3','P8':'QUAD 4','P9':'QUAD 3','P10':'QUAD 4','P11':'QUAD 3','P12':'QUAD 4','P13':'QUAD 3','P14':'QUAD 4','P15':'QUAD 3','P16':'QUAD 4','P17':'QUAD 3','P18':'QUAD 4','P19':'QUAD 3','P20':'QUAD 4','P21':'QUAD 3','P22':'QUAD 4','P23':'QUAD 3','P24':'QUAD 4',}
 
 comp['quad'] = comp['Well'].map(quad_384).fillna('missing')
+comp['UID'] = comp['Run_ID'] = comp['Well']
    
 
 ####need a function here to strip out empty arrays from the data_stream - not a great idea
