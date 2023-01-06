@@ -293,11 +293,11 @@ def scoring(row):
         return('Negative Patient')
     elif row['norm_N_Cov'] > 0.5 and row['norm_N_Cov'] <= 1.0 and row['norm_RNaseP'] >0.4:
         return('PLOD')
-    elif row['norm_N_Cov'] > 0.85 and row['norm_N_Cov'] <= 1.5 and row['norm_RNaseP'] > 0.4:
+    elif row['norm_N_Cov'] > 0.8 and row['norm_N_Cov'] <= 1.5 and row['norm_RNaseP'] > 0.4:
         return('N_Cov Patient Positive')
     elif row['norm_N_Cov'] > 1.5 and row['norm_RNaseP'] >= 0.2:
         return('N_Cov Patient Positive plus E')
-    elif row['norm_N_Cov'] > 0.85 and row['norm_N_Cov'] <= 1.5 and row['norm_RNaseP']<0.4:
+    elif row['norm_N_Cov'] > 0.8 and row['norm_N_Cov'] <= 1.5 and row['norm_RNaseP']<0.4:
         return('Control_N_Cov')
     elif row['norm_N_Cov'] > 1.5 and row['norm_RNaseP']<0.4:
         return('Control_N_Cov_plus_E')
@@ -307,7 +307,7 @@ def scoring(row):
         return('missing')
     
 def void_detect_neg(row):
-    if row['norm_N_Cov'] > 1.0:
+    if row['norm_N_Cov'] > 0.8:
         return('Detected')
     elif row['norm_N_Cov'] > 0.5 and row['norm_N_Cov'] <= 1.0:
         return('PLOD')
@@ -317,7 +317,7 @@ def void_detect_neg(row):
 def hit_detect_neg(row):
     if row['norm_N_Cov'] >= 1.5:
         return('3-hit_detect')
-    elif row['norm_N_Cov'] >= 1 and row['norm_N_Cov'] < 1.5 :
+    elif row['norm_N_Cov'] >= 0.8 and row['norm_N_Cov'] < 1.5 :
         return('2-hit_detect')
     elif row['norm_N_Cov'] > 0.5 and row['norm_N_Cov'] <= 1.0:
         return('1-hit_detect')
@@ -383,7 +383,7 @@ def fam_pro_qc(comp):
     figN1 = px.scatter(comp, x= 'order', y = 'norm_N_Cov' ,color = 'Result', title = 'N1 N2 Calls - normalised processinng view')
 
     figN1.add_trace(go.Scatter(
-        y=[1, 1],
+        y=[0.8, 0.8],
         x=[comp.order.min(), comp.order.max()],
         mode="lines+markers+text",
         name="Lower_2_hit_Positive_Boundary",
